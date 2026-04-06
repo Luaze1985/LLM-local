@@ -1,0 +1,52 @@
+{
+  "name": "local_llm",
+  "profile": "concept_context",
+  "created_at": "2026-04-06",
+  "capabilities": [
+    "session_state",
+    "compaction",
+    "logging",
+    "permissions",
+    "verification"
+  ],
+  "lifecycle": {
+    "mode": "workspace_first",
+    "promotion_status": "workspace_only",
+    "promotion_review_template": "templates/PROFILE_PROMOTION_REVIEW_TEMPLATE.md"
+  },
+  "required_paths": [
+    "workspace.yml",
+    "README.md",
+    "AGENTS.md",
+    "config",
+    "tasks/active",
+    "tasks/archive",
+    "logs",
+    "state/checkpoints",
+    "state/context",
+    "tasks/active/001-bootstrap.md",
+    "state/context/use_case_brief.md",
+    "state/context/working_context.md",
+    "state/checkpoints/000_initial_checkpoint.md",
+    "intake/ideas",
+    "intake/github",
+    "intake/github/raw",
+    "intake/local_files",
+    "intake/local_files/raw",
+    "intake/notion",
+    "intake/notion/raw",
+    "source_notes",
+    "concepts/candidates",
+    "concepts/selected",
+    "context_packets/chatgpt_project",
+    "context_packets/github_ready",
+    "handoff",
+    "intake/ideas/001_seed_idea.md",
+    "intake/github/001_github_source.md",
+    "intake/local_files/001_local_source.md",
+    "intake/notion/001_notion_source.md",
+    "concepts/candidates/001_initial_concept.md",
+    "context_packets/chatgpt_project/001_project_context_packet.md",
+    "context_packets/github_ready/001_github_sync_note.md"
+  ]
+}

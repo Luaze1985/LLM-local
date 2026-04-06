@@ -1,0 +1,50 @@
+# GitHub QA – lokal LLM / repoanalyse / hybrid / n8n
+Dette er en intern komposittscore.
+Skala:
+- **A** = svært høy relevans
+- **B** = god relevans
+- **C** = sekundær relevans
+
+| Repo | Kategori | Prioritet | Score (1-5) | Hvorfor det betyr noe |
+|---|---|---:|---:|---|
+| `ollama/ollama` | runtime | A | 5 | Kjerne-runtime for lokal modellkjøring, API og integrasjoner mot Claude/Codex. |
+| `open-webui/open-webui` | ui | B | 4 | Moden lokal UI rundt flere backends, nyttig men ikke nødvendig i første fase. |
+| `ollama/ollama-python` | bindings | B | 4 | Offisiell Python-klient for enkel lokal controller. |
+| `ollama/ollama-js` | bindings | B | 4 | Offisiell JS-klient. |
+| `awaescher/OllamaSharp` | bindings | B | 4 | Solid .NET/Ollama-integrasjon. |
+| `ggml-org/llama.cpp` | runtime | A | 5 | Lavnivå-motor og referansepunkt for lokal inferens. |
+| `abetlen/llama-cpp-python` | bindings | A | 4 | Python-bro til llama.cpp, nyttig ved egen controller. |
+| `withcatai/node-llama-cpp` | bindings | B | 4 | Node-bro til llama.cpp. |
+| `vllm-project/vllm` | runtime | A | 4 | Sterk server for tyngre inferens og produksjonslignende oppsett. |
+| `vllm-project/vllm-ascend` | runtime | C | 3 | Mer spesialisert variant, mindre relevant for deg. |
+| `mudler/LocalAI` | gateway | A | 5 | OpenAI/Anthropic-kompatibel lokal motor med mange backends og AMD/ROCm-støtte. |
+| `janhq/jan` | desktop | A | 4 | God desktop-klient/server for lokal bruk, enkel å teste med. |
+| `nomic-ai/gpt4all` | desktop | B | 3 | Fortsatt relevant, men ikke tydeligst for repo-agentflyt i 2026. |
+| `Mintplex-Labs/anything-llm` | rag_agent | A | 4 | Sterk lokal kunnskaps-/agentplattform, mer nyttig etter grunnworkflow virker. |
+| `Mintplex-Labs/anythingllm-docs` | docs | B | 3 | Dokumentasjonsrepo, sekundært signal. |
+| `Aider-AI/aider` | coding_agent | A | 5 | Terminal-først repoarbeid, repomap, git, lint/test. Sterkt signal for din arbeidsform. |
+| `hotovo/aider-desk` | wrapper | C | 2 | Sekundært Aider-prosjekt. |
+| `cline/cline` | coding_agent | A | 5 | Sterk IDE-agent med eksplisitt kontekststyring, terminal, browser, MCP og lokale modeller. |
+| `OpenHands/OpenHands` | coding_agent | A | 4 | Stor agentplattform med CLI/GUI/SDK, men tyngre enn du trenger først. |
+| `OpenHands/OpenHands-CLI` | coding_agent | B | 4 | CLI-variant av OpenHands. |
+| `OpenHands/software-agent-sdk` | sdk | B | 4 | Byggesteiner for større agentoppsett. |
+| `BerriAI/litellm` | gateway | A | 4 | Svært nyttig som ruter/gateway mellom lokal og sky. |
+| `n8n-io/n8n` | automation | A | 4 | Sterk senere automatisering, ikke førstevalg for manuell repoanalyse. |
+| `langfuse/langfuse` | observability | B | 3 | Nyttig senere for logging/evaluering. |
+| `langchain-ai/langchain` | framework | B | 3 | Mektig, men ofte mer kompleks enn nødvendig for ditt første oppsett. |
+| `langchain-ai/langchainjs` | framework | B | 3 | JS-variant, samme vurdering. |
+| `run-llama/llama_index` | rag_framework | B | 3 | Bra for dokument-/RAG-lag senere. |
+| `run-llama/LlamaIndexTS` | rag_framework | C | 3 | TS-variant. |
+| `docker/genai-stack` | template | C | 2 | Nyttig som referanse, men ikke styrende. |
+| `n8n-io/n8n-docs` | docs | B | 3 | Dokumentasjonssignal for n8n-sporet. |
+| `QwenLM/Qwen3-Coder` | model | A | 5 | Sterkeste åpne lokale kodemodell-signalet i repoene jeg sjekket. |
+| `deepseek-ai/DeepSeek-Coder` | model | B | 3 | Viktig historisk modellfamilie, men svakere 2026-signal enn Qwen3-Coder. |
+| `deepseek-ai/DeepSeek-Coder-V2` | model | B | 3 | Fortsatt relevant, men ikke førstevalg nå. |
+| `huggingface/Qwen2.5-Coder` | model | B | 4 | Praktisk fallback med moden økosystemstøtte. |
+
+## Kort konklusjon
+
+- Lokal controller først er støttet av sterke repo-signaler (`ollama`, `aider`, `cline`, `Qwen3-Coder`).
+- Hybrid lokal + Claude/Codex er støttet av direkte integrasjons- og gateway-signal (`ollama`, `litellm`, `LocalAI`).
+- n8n er relevant som senere automatisering, ikke som første manuelle repoarbeidsflate.
+- Qwen3-Coder er sterkeste lokale kodemodell-signal i denne GitHub-runden.
