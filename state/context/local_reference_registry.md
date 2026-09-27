@@ -52,6 +52,17 @@ spørre eksplisitt når en nødvendig lokal referanse ikke finnes her.
   - sharing: kode kan renses og deles senere, men repoet som helhet må først
     ryddes
 
+- `jev-openrouter-skill`
+  - path: `https://github.com/alexadark/jev-openrouter-skill` (raw kopi:
+    `intake/github/raw/jev-openrouter-skill_2026-09-27.zip`)
+  - type: `repo`
+  - role: ekstern, ferdig Codex CLI-skill for modellvalg-rådgivning via
+    OpenRouter/TypeSafe Jev; frittstående, ikke koblet til `llm-controller`
+    eller OpenClaw
+  - sharing: allerede offentlig og MIT-lisensiert; personlig tilpasset kopi
+    (norsk Windows-oppskrift) er levert direkte til brukeren som nedlastbar
+    zip, ikke committet inn i dette repoet
+
 # Internal Truth Files For llm-controller
 
 - `config.yaml`
